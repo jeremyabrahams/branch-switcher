@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "BiblioCommons Branch Switcher",
+  "version": "1.0.0",
+  "description": "Adds links to GRPL/KDL BiblioCommons book and search pages that jump to the same page on the other branch.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://kdl.bibliocommons.com/v2/record/*",
+        "https://grpl.bibliocommons.com/v2/record/*",
+        "https://kdl.bibliocommons.com/v2/search*",
+        "https://grpl.bibliocommons.com/v2/search*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
